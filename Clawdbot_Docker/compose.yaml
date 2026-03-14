@@ -19,6 +19,8 @@ services:
       - ./data/config:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
       - ./iran-war:/home/node/.openclaw/workspace-iran-war
+      - ../src:/app/src:ro
+      - ../apps/shared/OpenClawKit/Sources/OpenClawKit/Resources:/app/apps/shared/OpenClawKit/Sources/OpenClawKit/Resources:ro
     ports:
       - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
       - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
@@ -68,6 +70,8 @@ services:
       - ./data/config:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
       - ./iran-war:/home/node/.openclaw/workspace-iran-war
+      - ../src:/app/src:ro
+      - ../apps/shared/OpenClawKit/Sources/OpenClawKit/Resources:/app/apps/shared/OpenClawKit/Sources/OpenClawKit/Resources:ro
     stdin_open: true
     tty: true
     init: true
