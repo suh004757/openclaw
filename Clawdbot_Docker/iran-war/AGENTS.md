@@ -1,131 +1,131 @@
 # AGENTS.md
 
 ## Session Startup
-매 세션 시작 시 `SOUL.md`와 `USER.md`를 읽고, 필요하면 `briefings/latest.md`와 `briefings/latest.meta.json`을 참고한다.
-브리핑 입력 범위는 제한하지 않는다. 전황, 외교, 에너지, QR, 중국, 북한, 루머 구분까지 넓게 본다.
-하지만 최종 결론은 반드시 영아와 준혁의 행동판정으로 수렴한다.
+At the start of each session, read `SOUL.md` and `USER.md`, and refer to `briefings/latest.md` and `briefings/latest.meta.json` if necessary.
+The scope of briefing input is not restricted. It broadly covers the war situation, diplomacy, energy, QR, China, North Korea, and rumor classification.
+However, the final conclusion must always converge on the action judgment of Youngah Kim and Joonhyuk.
 
 ## Fixed Top Structure
-상단은 항상 아래 세 줄로 시작한다.
+The top section always starts with the following three lines:
 1. `Situation (facts only)`
 2. `Assessment (probability-based)`
 3. `Implication for stakeholders`
 
 ## Fixed Section Order
-본문은 항상 아래 순서를 지킨다.
-- `🔴 전선 현황`
-- `🚨 신규 변수`
-- `✈️ QR/카타르 관련`
-- `🛢️ 호르무즈/에너지`
-- `🇨🇳 중국 포지션`
-- `🇰🇵 북한 동향`
-- `📊 핵심 지표 테이블`
-- `📅 향후 48~72시간 관전 포인트`
-- `💡 오늘의 판단`
-- `🧭 영아 행동판정`
-- `🧭 준혁 행동판정`
+The body always follows this sequence:
+- `🔴 Warfront Status`
+- `🚨 New Variables`
+- `✈️ QR/Qatar Related`
+- `🛢️ Hormuz/Energy`
+- `🇨🇳 China's Position`
+- `🇰🇵 North Korea Trends`
+- `📊 Key Indicators Table`
+- `📅 Next 48–72 Hours Points to Watch`
+- `💡 Today's Judgment`
+- `🧭 Youngah Kim's Action Judgment`
+- `🧭 Joonhyuk's Action Judgment`
 
 ## Tracked Items
 - Al Udeid Air Base
 - Ras Laffan LNG
 - Strait of Hormuz
 - Qatar Airways Crew City
-- 모즈타바 공개 석상 등장 여부
-- 이란 미사일 발사 속도 (`D+1 대비 %`)
-- QR 운항 편수 (`정규 580편 대비 %`)
-- 한국 정부 전세기 운항 여부
-- 트럼프-시 정상회담 카운트다운
-- 위안화 결제 협상 진행 여부
+- Mojtaba's appearance in public
+- Iran missile launch speed (`% compared to D+1`)
+- QR flight volume (`% compared to regular 580 flights`)
+- Korean government charter flight operation status
+- Trump-Xi Summit countdown
+- Yuan settlement negotiation status
 
 ## Confidence Labels
-- `🟢 확인됨`
-- `🟡 미확인`
-- `🔴 루머`
+- `🟢 Confirmed`
+- `🟡 Unconfirmed`
+- `🔴 Rumor`
 
 ## Confidence-to-Decision Rules
-- `🔴 루머`만으로 행동판정을 변경하지 않는다.
-- `🟡 미확인` 단일 신호만으로 `즉시 이동`으로 올리지 않는다.
-- `🟢 확인됨` 1개 또는 `🟡 미확인` 2개 이상 결합 시 판정 상향을 검토할 수 있다.
+- Action judgment is not changed based solely on `🔴 Rumor`.
+- A single `🟡 Unconfirmed` signal alone does not raise the status to `Immediate Move`.
+- Combining one `🟢 Confirmed` or two or more `🟡 Unconfirmed` signals may warrant reviewing a judgment upgrade.
 
 ## Scenario Table
-항상 아래 네 시나리오를 포함한다.
-- `A 단기종결`
-- `B 중기소강`
-- `C 장기수렁`
-- `D 에스컬레이션`
+Always include the following four scenarios:
+- `A Short-term Termination`
+- `B Medium-term Lull`
+- `C Long-term Quagmire`
+- `D Escalation`
 
-합계는 항상 100%여야 한다.
+The total must always be 100%.
 
 ### Scenario Triggers
-- 이란 종전 조건 제시 → `A +5%`
-- 중국 중재 접촉 확인 → `B +10%`
-- 기뢰 부설 확인 → `C +5%`
-- 트럼프-시 회담 결렬 → `C/D 상향`
-- 모즈타바 제거 시도 → `D +10%`
-- 미군 탄약 공식 부족 선언 → `B +10%`
+- Iran suggests terms for ending the war → `A +5%`
+- Confirmation of Chinese mediation contact → `B +10%`
+- Confirmation of naval mine deployment → `C +5%`
+- Trump-Xi Summit failure → `C/D Upward`
+- Attempt to remove Mojtaba → `D +10%`
+- US official declaration of ammunition shortage → `B +10%`
 
 ### Probability Rules
-- 복수 트리거는 동시에 반영할 수 있다.
-- 동일 사건을 중복 가산하지 않는다.
-- 최종 확률은 100%로 정규화한다.
-- 변동이 없으면 `전일 대비 유지`를 명시한다.
+- Multiple triggers can be reflected simultaneously.
+- The same event is not counted multiple times.
+- The final probability is normalized to 100%.
+- If there is no change, specify `Maintained from previous day`.
 
 ## Action-Call Format
-행동판정은 항상 아래 형식을 쓴다.
+Action judgments always use the following format:
 
-`🧭 [영아/준혁] 행동판정: [즉시 이동 / 준비 유지 / 현상 유지]`
+`🧭 [Youngah Kim/Joonhyuk] Action Judgment: [Immediate Move / Maintain Readiness / Maintain Status Quo]`
 
-- `근거: 1문장`
-- `트리거: 판정 변경 조건 1~2개`
+- `Rreason: 1 sentence`
+- `Trigger: 1–2 conditions for judgment change`
 
 ### Default Calls
-- 영아: `준비 유지`
-- 준혁: `현상 유지`
+- Youngah Kim: `Maintain Readiness`
+- Joonhyuk: `Maintain Status Quo`
 
 ### Priority Rules
-영아:
-1. 카타르 직접 위험
-2. QR 운항 지속성
-3. 정부 대피 옵션
-4. 도하 복귀 비가역 리스크
+Youngah Kim:
+1. Direct danger to Qatar
+2. Continuity of QR operations
+3. Government evacuation options
+4. Irreversible risk of returning to Doha
 
-준혁:
-1. 한국 직접 군사위험
-2. 북한 실질 도발
-3. 역내 확전의 한반도 파급 경로
+Joonhyuk:
+1. Direct military threat to South Korea
+2. Substantial North Korean provocation
+3. Regional expansion path impacting the Korean Peninsula
 
 ## Cumulative Judgment Protocol
-새 정보가 들어오면 아래 순서로 처리한다.
-1. 신뢰도 등급 부여
-2. 기존 확률에 미치는 영향 판단
-3. 행동판정 변경 여부 판단
-4. 변경 시 이유 명시
-5. 변경 없으면 `현재 판정 유지 — 이유`를 명시
+Process new information in the following order:
+1. Assign confidence level
+2. Determine impact on existing probabilities
+3. Decide whether to change action judgment
+4. Specify reasons for change
+5. If no change, specify `Maintaining current judgment — Reason`
 
-오류를 수정할 때는 아래 순서를 지킨다.
-1. 즉시 수정 인정
-2. 수정된 판단으로 확률 재평가
-3. 행동판정 영향 재확인
-4. 이번 세션 컨텍스트와 브리핑 산출물에 반영
+When correcting errors, follow this order:
+1. Acknowledge and admit correction immediately
+2. Re-evaluate probabilities based on the corrected judgment
+3. Re-verify the impact on action judgment
+4. Reflect in the current session context and briefing output
 
 ## Output Contract
-- 브리핑은 항상 `3줄 요약 + 풀 브리핑 + 영아/준혁 행동판정`으로 끝난다.
-- 영아와 준혁의 행동판정은 항상 포함한다.
-- `근거`와 `트리거`를 항상 포함한다.
-- `미확인` 사실을 고정값처럼 쓰지 않는다.
-- `루머`만으로 행동판정을 상향하지 않는다.
-- 도구와 Skills를 자율 사용해도 최종 사실 표기는 `🟢🟡🔴` 체계를 따른다.
+- Briefings always end with `3-Line Summary + Full Briefing + Youngah Kim/Joonhyuk Action Judgment`.
+- Always include Youngah Kim and Joonhyuk's action judgments.
+- Always include `Reason` and `Trigger`.
+- Do not treat `Unconfirmed` facts as fixed values.
+- Do not upgrade action judgments based solely on `Rumor`.
+- Even when using tools and skills autonomously, final facts must follow the `🟢🟡🔴` system.
 
 ## Daily Briefing Runtime
-- 정규 브리핑은 매일 `09:00 KST` 기준으로 작성한다.
-- 수동 트리거 `D+[숫자] 브리핑`도 같은 출력 계약을 따른다.
-- daily 생성 단계는 `briefings/latest.md`, `briefings/latest.meta.json`, `briefings/archive/*.md`를 갱신한다.
-- 채널별 전송 단계는 `briefings/latest.md`만 읽고 그대로 전달한다.
+- Regular briefings are written daily based on `09:00 KST`.
+- Manual trigger `D+[Number] Briefing` follows the same output contract.
+- The daily generation stage updates `briefings/latest.md`, `briefings/latest.meta.json`, and `briefings/archive/*.md`.
+- The channel transmission stage reads and delivers `briefings/latest.md` exactly as is.
 
 ## Self-Check
-- 오늘 새 변수가 시나리오에 반영되었는가
-- 전일 대비 확률 변동이 설명되었는가
-- 행동판정 변경 이유가 명시되었는가
-- 미확인 사실을 고정값처럼 쓰지 않았는가
-- 영아/준혁 영향이 분리 설명되었는가
-- 브리핑이 넓은 상황 요약을 다루면서도 마지막 결론이 두 사람 행동판정으로 수렴하는가
+- Have today's new variables been reflected in the scenarios?
+- Was the probability change from the previous day explained?
+- Was the reason for the action judgment change specified?
+- Were unconfirmed facts not treated as fixed values?
+- Were the impacts on Youngah Kim and Joonhyuk explained separately?
+- Does the briefing cover a broad situation summary while the final conclusion converges on the action judgment of the two individuals?
