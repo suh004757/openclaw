@@ -123,19 +123,21 @@ export function scheduleFollowupDrain(
 
           const routing = resolveOriginRoutingMetadata(items);
 
-          // Detect multi-sender batches and enrich prompt with per-item reply tags
-          // so the model can produce separate quoted replies for each sender.
+          // When multiple messages are collected, enrich the prompt with per-item
+          // message_id hints so the model can produce separate [[reply_to:<id>]]
+          // tagged sections for each distinct topic or sender.
+          const hasMultipleItems = items.length > 1;
           const senderIds = new Set(items.map((i) => i.run.senderId).filter(Boolean));
-          const isMultiSender = senderIds.size > 1;
+          const senderNote = senderIds.size > 1 ? ` from ${senderIds.size} senders` : "";
           const prompt = buildCollectPrompt({
-            title: isMultiSender
-              ? `[Queued messages while agent was busy — ${items.length} messages from ${senderIds.size} senders]\nUse [[reply_to:<message_id>]] before each section of your reply to quote the message you are answering.`
+            title: hasMultipleItems
+              ? `[Queued messages while agent was busy — ${items.length} messages${senderNote}]\nUse [[reply_to:<message_id>]] before each section of your reply to quote the message you are answering.`
               : "[Queued messages while agent was busy]",
             items,
             summary,
             renderItem: (item, idx) => {
               const tagHint =
-                isMultiSender && item.messageId ? ` (message_id: ${item.messageId})` : "";
+                hasMultipleItems && item.messageId ? ` (message_id: ${item.messageId})` : "";
               return `---\nQueued #${idx + 1}${tagHint}\n${item.prompt}`.trim();
             },
           });
